@@ -1,6 +1,26 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
-  "plugins": ["stylelint-prettier", "stylelint-order"],
+  "plugins": ["stylelint-order"],
   "ignoreFiles": ["**/*.ts", "**/*.tsx", "**/*.json"],
-  "rules": {}
+  "rules": {
+    "order/order": [
+      [
+        "dollar-variables",
+        "custom-properties",
+        "at-rules",
+        "less-mixins",
+        "declarations",
+        {
+          "type": "at-rule",
+          "name": "supports"
+        },
+        {
+          "type": "at-rule",
+          "name": "media"
+        },
+        "rules"
+      ],
+      { "severity": "warning" }
+    ]
+  }
 }
