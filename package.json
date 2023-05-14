@@ -21,8 +21,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint-fix": "eslint --fix --ext .ts,.tsx src",
-    "format": "prettier --w src/**/*.{ts,tsx,css,less} src/*.{ts,tsx,css,less}"
+    "lint:eslint": "eslint --fix --ext .ts,.tsx,.json src --color",
+    "lint:prettier": "prettier --w src/**/*.{ts,tsx,json,css,less,md} src/*.{ts,tsx,json,css,less,md}",
+    "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -43,6 +45,8 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.1",
     "prettier": "^2.6.2"
   }
 }
