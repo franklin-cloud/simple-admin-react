@@ -14,7 +14,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "experimentalDecorators": true // 启用对ES装饰器的实验性支持
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"] // 不进行类型检查的文件
 }
