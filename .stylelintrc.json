@@ -1,0 +1,6 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "plugins": ["stylelint-prettier", "stylelint-order"],
+  "ignoreFiles": ["**/*.ts", "**/*.tsx", "**/*.json"],
+  "rules": {}
+}
