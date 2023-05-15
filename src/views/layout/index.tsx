@@ -6,7 +6,7 @@ const LayoutPage = () => {
     <div>
       <ul>
         <li>
-          <Link to="/">账号页面</Link>
+          <Link to="account">账号页面</Link>
         </li>
         <li>
           <Link to="user">用户页面</Link>

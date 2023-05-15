@@ -1,11 +1,10 @@
 import { LazyExoticComponent } from "react";
 
-export interface RouteconfigObject {
+export interface RouteItemType {
   path: string;
   element: LazyExoticComponent<() => JSX.Element>;
   needAuth: boolean;
   isMenu: boolean;
-  permissions: string[];
-  defaultRoute?: boolean;
-  children?: RouteconfigObject[];
+  permissions: null | string[];
+  children?: RouteItemType[];
 }

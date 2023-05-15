@@ -1,28 +1,30 @@
 import { lazy } from "react";
-import { RouteconfigObject } from "./types";
-const LoginPage = lazy(() => import("../views/login/index"));
+import { RouteItemType } from "./types";
+
 const LayoutPage = lazy(() => import("../views/layout/index"));
 const AccountPage = lazy(() => import("../views/account/index"));
 const UserPage = lazy(() => import("../views/user/index"));
-const NotFoundPage = lazy(() => import("../views/notFound/index"));
 
-export const constantRouteConfig: RouteconfigObject[] = [
+export const LoginPage = lazy(() => import("../views/login/index"));
+export const NotFoundPage = lazy(() => import("../views/notFound/index"));
+
+export const constantRouteConfig: RouteItemType[] = [
   {
     path: "login",
     element: LoginPage,
     needAuth: false,
     isMenu: false,
-    permissions: [""],
+    permissions: null,
   },
 ];
 
-export const dynamicRouteConfig: RouteconfigObject[] = [
+export const dynamicRouteConfig: RouteItemType[] = [
   {
-    path: "/",
+    path: "main",
     element: LayoutPage,
-    needAuth: true,
+    needAuth: false,
     isMenu: false,
-    permissions: ["1"],
+    permissions: null,
     children: [
       {
         path: "account",
@@ -30,24 +32,23 @@ export const dynamicRouteConfig: RouteconfigObject[] = [
         needAuth: true,
         isMenu: true,
         permissions: ["1"],
-        defaultRoute: true,
       },
       {
         path: "user",
         element: UserPage,
         needAuth: true,
         isMenu: true,
-        permissions: ["1"],
+        permissions: ["0"],
       },
       {
         path: "*",
         element: NotFoundPage,
         needAuth: true,
         isMenu: false,
-        permissions: [""],
+        permissions: [],
       },
     ],
   },
 ];
 
-export const allRouteConfig: RouteconfigObject[] = [...constantRouteConfig, ...dynamicRouteConfig];
+export const allRouteConfig: RouteItemType[] = [...constantRouteConfig, ...dynamicRouteConfig];

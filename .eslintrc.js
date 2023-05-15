@@ -1,3 +1,7 @@
+/**
+ * plugins eslint校验规则的增强，当我们想要运用插件里的某个规则时，先配置插件，然后在rules里配置相应的规则
+ * extends 能让我们直接使用别人配置好的规则
+ */
 module.exports = {
   env: {
     browser: true,
