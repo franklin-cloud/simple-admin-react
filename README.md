@@ -44,3 +44,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## 路由
+
+[react-router-dom-v6](https://reactrouter.com/en/6.11.1/start/overview)
+
+## 状态管理
+
+[mobx](https://cn.mobx.js.org/)
+
+[mobx-react](https://www.npmjs.com/package/mobx-react)
