@@ -32,4 +32,12 @@ module.exports = {
       version: "detect", // 告诉eslint-plugin-react 自动检测 React的版本
     },
   },
+  overrides: [
+    {
+      files: ["*.d.ts"],
+      rules: {
+        "@typescript-eslint/triple-slash-reference": "off",
+      },
+    },
+  ],
 };
